@@ -70,7 +70,7 @@ const Portfolio = () => {
       supervisor: "Prof. Anand Mishra",
       period: "Feb 2025 – Apr 2025",
       github: "https://github.com/BhargavShekokar3425/AlgoViz", // Add your GitHub link
-      demo: "#",   // Add your live demo link
+      demo: "https://algovizz.web.app/",   // Add your live demo link
       category: "ML Visualization",
       color: "primary"
     },
