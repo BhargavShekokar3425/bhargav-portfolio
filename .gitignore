@@ -1,24 +1,57 @@
+# Node modules
+node_modules/
+
+# Build output
+dist/
+build/
+.vite/
+
 # Logs
-logs
-*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# IDE/editor files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+# OS files
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+Thumbs.db
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Misc
+*.log
+*.tmp
+*.swp
+
+# Coverage
+coverage/
+*.lcov
+
+# Dependency directories
+.bun/
+.pnp/
+.pnp.js
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional: ignore static analysis and test output
+*.eslintcache
+jest/
+test-results/
+
+# Optional: ignore generated files
+*.bak
+*.orig
+*.rej
