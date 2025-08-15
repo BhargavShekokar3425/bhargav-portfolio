@@ -4,16 +4,18 @@
 
 This is my personal portfolio website built with React, TypeScript, Vite, shadcn-ui, and Tailwind CSS.
 
+**Live Website:** [bhargav-portfolio-app.vercel.app](https://bhargav-portfolio-app.vercel.app)
+
 ## How to Run Locally
 
 To run this project on your machine:
 
 ```sh
 # Step 1: Clone the repository using the project's Git URL.
-git clone https://github.com/BhargavShekokar3425/bhargav-builds-fast
+git clone https://github.com/BhargavShekokar3425/bhargav-portfolio
 
 # Step 2: Navigate to the project directory.
-cd bhargav-builds-fast
+cd bhargav-portfolio
 
 # Step 3: Install the necessary dependencies.
 npm install
@@ -37,4 +39,4 @@ Just build the project and follow the deployment instructions for your chosen pl
 
 ---
 
-Made by
+Made with love by Bhargav Shekokar
