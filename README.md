@@ -34,8 +34,7 @@ npm run dev
 
 ## Deployment
 
-You can deploy this project using any static hosting service (e.g. Vercel, Netlify, GitHub Pages).  
-Just build the project and follow the deployment instructions for your chosen platform.
+This project/portfolio has been deployed at Vercel.
 
 ---
 
