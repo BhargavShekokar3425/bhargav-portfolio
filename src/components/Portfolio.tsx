@@ -16,81 +16,81 @@ const Portfolio = () => {
   const projects = [
     {
       id: 1,
-      title: "Generative AI Video Pipeline",
-      description: "End-to-end pipeline for generating high-quality videos using advanced AI models with optimized rendering and processing.",
-      image: "🎬",
-      icon: Video,
-      technologies: ["Python", "PyTorch", "FastAPI", "Redis", "Docker"],
-      metrics: ["40% faster processing", "5GB+ video handling", "Real-time preview"],
-      github: "https://github.com/BhargavShekokar3425",
-      demo: "#",
-      category: "Machine Learning",
-      color: "primary"
-    },
-    {
-      id: 2,
-      title: "DeepWeed Detection System",
-      description: "Computer vision system for agricultural weed detection using deep learning with 95%+ accuracy for precision farming.",
-      image: "🌱",
-      icon: Leaf,
-      technologies: ["TensorFlow", "OpenCV", "Python", "Flask", "SQLite"],
-      metrics: ["95%+ accuracy", "Real-time detection", "Mobile compatible"],
-      github: "https://github.com/BhargavShekokar3425",
-      demo: "#",
-      category: "Computer Vision",
-      color: "accent"
-    },
-    {
-      id: 3,
-      title: "RadRG Radiology Report Generator",
-      description: "AI-powered system for automated radiology report generation from medical images with clinical accuracy validation.",
+      title: "RadRG: Automated Chest X-ray Radiology Report Generation",
+      description: "Cloud-ready multimodal system for automated radiology report generation, integrating image ingestion, preprocessing, inference, and formatted data serialization.",
       image: "🏥",
       icon: Brain,
-      technologies: ["Hugging Face", "PyTorch", "FastAPI", "PostgreSQL", "React"],
-      metrics: ["Clinical accuracy", "60% time saved", "HIPAA compliant"],
-      github: "https://github.com/BhargavShekokar3425",
+      technologies: ["Python", "Vision Transformer", "Cloud Run", "Containerization", "FastAPI"],
+      highlights: [
+        "Improved throughput by 60%",
+        "Scalable microservice architecture",
+        "Reduced latency by 28%",
+        "Persistent storage & async job execution"
+      ],
+      supervisor: "Prof. Bikash Santra",
+      period: "Jan 2025 – May 2025",
+      github: "#", // Add your report link if available
       demo: "#",
       category: "Healthcare AI",
       color: "primary"
     },
     {
-      id: 4,
-      title: "ISRO Lunar Mapping Challenge",
-      description: "3rd place national winner - Advanced lunar terrain mapping system using satellite imagery and machine learning algorithms.",
-      image: "🌙",
-      icon: Award,
-      technologies: ["Python", "Satellite Imagery", "ML", "GIS", "NumPy"],
-      metrics: ["3rd place nationally", "Terrain classification", "High precision"],
-      github: "https://github.com/BhargavShekokar3425",
+      id: 2,
+      title: "MediHelp Healthcare Platform",
+      description: "Microservice-based healthcare platform supporting real-time ambulance dispatch, appointment scheduling, and encrypted doctor-patient consultations.",
+      image: "💡",
+      icon: Database,
+      technologies: ["Python", "Microservices", "API", "Cloud", "Security"],
+      highlights: [
+        "Boosted reliability by 27%",
+        "Cut emergency response time by 18%",
+        "Optimized data modeling",
+        "Encrypted consultations"
+      ],
+      supervisor: "Prof. Romi Banerjee",
+      period: "Feb 2025 – Apr 2025",
+      github: "https://github.com/BhargavShekokar3425/medihelppvt", // Add your GitHub link
       demo: "#",
-      category: "Space Tech",
-      color: "accent",
-      award: true
+      category: "Healthcare Platform",
+      color: "accent"
     },
     {
-      id: 5,
-      title: "Aggregate Query Optimization Engine",
-      description: "High-performance database query optimizer reducing execution time by 70% for complex aggregate operations.",
-      image: "⚡",
-      icon: Database,
-      technologies: ["C++", "SQL", "Algorithm Design", "Performance Tuning"],
-      metrics: ["70% faster queries", "Memory efficient", "Scalable design"],
-      github: "https://github.com/BhargavShekokar3425",
-      demo: "#",
-      category: "Database Systems",
+      id: 3,
+      title: "AlgoViz: Interactive ML Visualization Platform",
+      description: "Interactive visual analytics tool supporting 10+ algorithms with dynamic parameter tuning and live classroom demonstration.",
+      image: "📊",
+      icon: Zap,
+      technologies: ["Python", "Google Cloud", "Firestore", "React"],
+      highlights: [
+        "Supports 10+ ML algorithms",
+        "Dynamic parameter tuning",
+        "Live demo for IITJ faculty",
+        "Cloud backend with Firestore"
+      ],
+      supervisor: "Prof. Anand Mishra",
+      period: "Feb 2025 – Apr 2025",
+      github: "https://github.com/BhargavShekokar3425/AlgoViz", // Add your GitHub link
+      demo: "#",   // Add your live demo link
+      category: "ML Visualization",
       color: "primary"
     },
     {
-      id: 6,
-      title: "Real-time Analytics Dashboard",
-      description: "Interactive dashboard for real-time data visualization with support for millions of data points and low-latency updates.",
-      image: "📊",
-      icon: Zap,
-      technologies: ["React", "Node.js", "WebSocket", "D3.js", "MongoDB"],
-      metrics: ["<100ms latency", "1M+ data points", "Real-time updates"],
-      github: "https://github.com/BhargavShekokar3425",
+      id: 4,
+      title: "Optimizing Aggregate Queries via Segment Trees",
+      description: "Modular SQL-like engine enabling rapid aggregate queries using Segment Trees and lazy propagation for range updates.",
+      image: "⚡",
+      icon: Database,
+      technologies: ["Python", "SQL", "Segment Trees", "Algorithm Design"],
+      highlights: [
+        "Rapid SUM, AVG, XOR queries",
+        "Lazy propagation for range updates",
+        "Cut query latency by 80% on large datasets"
+      ],
+      supervisor: "Prof. Dip Sankar Banerjee",
+      period: "Oct 2024 – Dec 2024",
+      github: "https://github.com/BhargavShekokar3425/Group2-G4", // Add your GitHub link
       demo: "#",
-      category: "Data Visualization",
+      category: "Database Systems",
       color: "accent"
     }
   ];
@@ -128,9 +128,6 @@ const Portfolio = () => {
                     <div>
                       <div className="flex items-center gap-2 mb-1">
                         <h3 className="text-lg font-semibold">{project.title}</h3>
-                        {project.award && (
-                          <Award className="w-4 h-4 text-yellow-500" />
-                        )}
                       </div>
                       <Badge variant="secondary" className="text-xs">
                         {project.category}
@@ -144,16 +141,17 @@ const Portfolio = () => {
                   {project.description}
                 </p>
 
-                {/* Metrics */}
-                <div className="grid grid-cols-1 gap-2 mb-4">
-                  {project.metrics.map((metric, index) => (
-                    <div key={index} className="flex items-center gap-2 text-xs">
-                      <div className={`w-1.5 h-1.5 rounded-full ${
-                        project.color === 'primary' ? 'bg-primary' : 'bg-accent'
-                      }`} />
-                      <span className="text-muted-foreground">{metric}</span>
-                    </div>
-                  ))}
+                {/* Highlights */}
+                <div className="mb-4">
+                  <h4 className="font-semibold text-sm mb-2 text-foreground">Key Highlights</h4>
+                  <ul className="space-y-2">
+                    {project.highlights.map((point, idx) => (
+                      <li key={idx} className="flex items-start gap-2 text-xs text-muted-foreground">
+                        <span className={`w-1.5 h-1.5 rounded-full ${project.color === 'primary' ? 'bg-primary' : 'bg-accent'}`} />
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
 

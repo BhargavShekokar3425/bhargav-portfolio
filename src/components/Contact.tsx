@@ -5,6 +5,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Github, Linkedin, Code, MapPin, Send, ExternalLink } from "lucide-react";
+import emailjs from "@emailjs/browser";
+
 const Contact = () => {
   const {
     toast
@@ -20,19 +22,36 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. I'll get back to you soon!"
+    // Send email using EmailJS
+    emailjs.send(
+      "service_3qx152r", // Service ID
+      "template_a9hakxs", // Template ID
+      {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message
+      },
+      "O9cJSzNGAT5Dbj5bN" // Public Key
+    ).then(() => {
+      toast({
+        title: "Message Sent!",
+        description: "Thank you for reaching out. I'll get back to you soon!"
+      });
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: ""
+      });
+    }).catch(() => {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again later."
+      });
+    }).finally(() => {
+      setIsSubmitting(false);
     });
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: ""
-    });
-    setIsSubmitting(false);
   };
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({
@@ -43,8 +62,8 @@ const Contact = () => {
   const contactMethods = [{
     icon: Mail,
     title: "Email",
-    value: "b23cs1008@iitj.ac.in",
-    href: "mailto:b23cs1008@iitj.ac.in",
+    value: "bnshekokar@gmail.com",
+    href: "mailto:bnshekokar@gmail.com",
     description: "Send me an email anytime"
   }, {
     icon: Github,
@@ -92,7 +111,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="font-medium">IIT Jodhpur, Rajasthan</p>
-                  <p className="text-sm text-muted-foreground">Available for remote work</p>
+                  <p className="text-sm text-muted-foreground">Available for exploring skyrocketing opportunities</p>
                 </div>
               </div>
             </div>

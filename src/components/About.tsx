@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { GraduationCap, Award, Calendar } from "lucide-react";
-import profileImage from "@/assets/profile-bhargav.jpg";
+import profileImage from "@/assets/profile-bhargav-new.jpg";
 
 const About = () => {
   const education = [

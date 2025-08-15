@@ -208,6 +208,15 @@ All colors MUST be HSL.
     transition: width 1.5s ease-out;
     border-radius: 2px;
   }
+
+  /* Accordion animations */
+  .animate-accordion-down {
+    animation: accordion-down 0.2s ease-out;
+  }
+
+  .animate-accordion-up {
+    animation: accordion-up 0.2s ease-out;
+  }
 }
 
 @keyframes float {
@@ -238,4 +247,16 @@ All colors MUST be HSL.
     opacity: 1;
     transform: scale(1);
   }
+}
+
+/* Add to your global CSS file (e.g., src/index.css) */
+
+@keyframes accordion-down {
+  from { height: 0; }
+  to { height: var(--radix-accordion-content-height); }
+}
+
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); }
+  to { height: 0; }
 }

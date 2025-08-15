@@ -29,7 +29,7 @@ const Hero = () => {
             <p className="text-lg text-muted-foreground max-w-2xl">
               Building systems that are fast, reliable, and built to last. 
               Passionate about software engineering, machine learning, and 
-              high-performance system design.
+              high-performance Algorithms.
             </p>
 
             {/* CTA Buttons */}
